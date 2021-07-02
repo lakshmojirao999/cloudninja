@@ -3,10 +3,17 @@
   vars: 
     url: playbooks.com
     company: zelarsoft
+  vars_files:
+  - example-var.yml  
   tasks:
   - name: Print url
     debug:
       msg: my url is {{ url }} and from company {{ company }}
+  - name: Print url
+    debug:
+      msg: my url is {{ url }} and from company {{ company }} 
+    vars:
+      company: lakshmoji       
   - name: Basic System env Vars
     debug:
       msg: "'{{ lookup('env', 'HOME') }}' is the HOME environment variable." 
