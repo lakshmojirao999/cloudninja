@@ -7,3 +7,9 @@
   - name: Print url
     debug:
       msg: my url is {{ url }} and from company {{ company }}
+  - name: Basic System env Vars
+    debug:
+      msg: "'{{ lookup('env', 'HOME') }}' is the HOME environment variable." 
+  - name: Basic System Hostname
+    debug:
+      msg: "'{{ lookup('env', 'hostname') }}' is the hostname environment variable."      
