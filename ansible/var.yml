@@ -12,4 +12,4 @@
       msg: "'{{ lookup('env', 'HOME') }}' is the HOME environment variable." 
   - name: Basic System Hostname
     debug:
-      msg: "'{{ lookup('env', 'hostname') }}' is the hostname environment variable."      
+      msg: "'{{ lookup('env', 'HOSTNAME') }}' is the hostname environment variable."      
