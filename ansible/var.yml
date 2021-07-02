@@ -1,0 +1,8 @@
+- name: Varible 
+  hosts: all
+  var: 
+    url: playbooks.com
+  tasks:
+  - name: Print url
+    debug:
+      msg: my url is {{ url }}
