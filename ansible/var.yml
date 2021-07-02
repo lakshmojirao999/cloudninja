@@ -4,7 +4,10 @@
     url: playbooks.com
     company: zelarsoft
   vars_files:
-  - example-var.yml  
+  - example-var.yml
+  vars_prompt:
+    - name: url
+      prompt: Enter Url  
   tasks:
   - name: Print url
     debug:
