@@ -1,8 +1,9 @@
 - name: Varible 
   hosts: all
-  var: 
+  vars: 
     url: playbooks.com
+    company: zelarsoft
   tasks:
   - name: Print url
     debug:
-      msg: my url is {{ url }}
+      msg: my url is {{ url }} and from company {{ company }}
