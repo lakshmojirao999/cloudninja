@@ -5,5 +5,5 @@
   Tasks:
     - name: URL Splits
       debug:
-      msg: {{ URL | urlplit }}    
+      msg: "{{ URL | urlsplit }}"   
 
