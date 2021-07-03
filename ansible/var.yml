@@ -19,8 +19,5 @@
       company: lakshmoji       
   - name: Basic System env Vars
     debug:
-      msg: "'{{ lookup('env', 'HOME') }}' is the HOME environment variable." 
-  - name: Basic System Hostname
-    shell:
-      cmd: hostname
-      #msg: "'{{ lookup('env', 'HOSTNAME') }}' is the hostname environment variable."      
+      msg: "'{{ ansibe_hostname }}' is the HOME environment variable." 
+     
