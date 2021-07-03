@@ -3,8 +3,9 @@
   hosts: all
   become: yes
   tasks:
-  - name: APT
+  - name: install niginx
     apt:
       name: nginx
       update_cache: yes
       state: present
+    become: yess  
