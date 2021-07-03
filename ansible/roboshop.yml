@@ -2,7 +2,7 @@
 - name: Robo Shop
   hosts: all
   become: yes
-  task:
+  tasks:
   - name: APT
     apt:
       name: nginx
