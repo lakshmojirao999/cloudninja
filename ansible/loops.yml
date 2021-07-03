@@ -1,0 +1,24 @@
+---
+- name: loop example
+  hots: all
+  tasks:    
+    - name: Create servers
+      debug:
+        name: "{{ item.name }}"
+        state: present
+      loop:
+        - name: server1
+          disks: 3gb
+          ram: 15Gb
+          network:
+            nic01: 100Gb
+            nic02: 10Gb
+        - name: server2
+          disks: 3gb
+          ram: 15Gb
+          network:
+            nic01: 100Gb
+            nic02: 10Gb
+      # loop_control:
+      #   label: "{{ item.name }}"
+
