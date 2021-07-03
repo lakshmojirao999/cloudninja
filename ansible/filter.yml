@@ -6,7 +6,7 @@
     tag_data:
       Environment: dev
       Application: Payment
-  Tasks:
+  tasks:
     - name: URL Splits
       debug:
       msg: "{{ URL | urlsplit }}"   
