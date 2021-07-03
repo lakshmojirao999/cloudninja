@@ -1,6 +1,6 @@
 ---
 - name: loop example
-  hots: all
+  hosts: all
   tasks:    
     - name: Create servers
       debug:
