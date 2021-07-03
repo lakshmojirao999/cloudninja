@@ -8,4 +8,25 @@
       name: nginx
       update_cache: yes
       state: present
-    become: yess  
+    become: yes
+
+  - name: Download nginx.conf
+    get_url:
+      url: https://github.com/zelar-soft-roboshop/frontend/archive/main.zip
+      dest: /tmp/frontend.zip   
+
+  - name: Remove default nginx file 
+    file:
+      path: {{ item }}
+      state: absent  
+      loop:
+        - /var/www/html 
+        - /etc/nginx/sites-enabled/default 
+        - /etc/nginx/sites-available/default/var/www/html 
+
+  - name: Extract frontend.zip into /etc/nginx
+    unarchive:
+      src: /tmp/frontend.zip
+      dest: /etc/nginx
+      remote_src: yes
+        
