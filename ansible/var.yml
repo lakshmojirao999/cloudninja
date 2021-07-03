@@ -19,5 +19,5 @@
       company: lakshmoji       
   - name: Basic System env Vars
     debug:
-      msg: "'{{ ansibe_hostname }}' is the HOME environment variable." 
+      msg: "{{ ansible_hostname }} is the HOME environment variable." 
      
