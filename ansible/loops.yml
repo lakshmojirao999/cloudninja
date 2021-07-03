@@ -5,7 +5,7 @@
     - name: Create servers
       debug:
         name: "{{ item.name }}"
-        state: present
+        # state: present
       loop:
         - name: server1
           disks: 3gb
