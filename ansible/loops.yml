@@ -4,7 +4,7 @@
   tasks:    
     - name: Create servers
       debug:
-        name: "{{ item.name }}"
+        msg: "{{ item.name }}"
         # state: present
       loop:
         - name: server1
