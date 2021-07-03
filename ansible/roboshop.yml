@@ -1,0 +1,10 @@
+---
+- name: Robo Shop
+  hosts: all
+  become: yes
+  task:
+  - name: APT
+    apt:
+      name: nginx
+      update_cache: yes
+      state: present
