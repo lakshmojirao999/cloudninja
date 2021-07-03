@@ -1,9 +1,19 @@
-- name : Demo filter
+---
+- name: Demo filter
   hosts: all
   vars:
     URL: https://github.com/zelar-soft-roboshop/frontend/archive/main.zip
+    tag_data:
+      Environment: dev
+      Application: Payment
   Tasks:
     - name: URL Splits
       debug:
       msg: "{{ URL | urlsplit }}"   
+    - name: URL Splits Print column
+      debug:
+      msg: "{{ URL.split(/).last }}" 
+    - name: Print tag data
+      debug:
+      msg: "{{ tag_data |dict2items }}"             
 
